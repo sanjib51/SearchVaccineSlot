@@ -1,0 +1,81 @@
+﻿@page "/fetchdata"
+@inject HttpClient Http
+@using System.Linq 
+
+<h1>Vaction Doses availability</h1>
+
+
+<input type="image" src="/img/Refresh_v1.png"  alt="Refresh" @onclick="RefreshDose"  />
+<label> Last refresh time: @localtime </label>
+
+@if (forecasts == null)
+{
+    <p><em>Loading...</em></p> 
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name and address</th>
+                <th>available_capacity</th>
+                <th>date</th>
+                <th>available_capacity_dose1</th>
+                <th>available_capacity_dose2</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var forecast in forecasts.centers)
+            {
+
+                @foreach (var session in forecast.sessions)
+                {
+                    <tr>
+                        <td>@forecast.name : @forecast.address</td>
+                        <td>@session.available_capacity</td>
+                        <td>@session.date</td>
+                        <td>@session.available_capacity_dose1</td>
+                        <td>@session.available_capacity_dose2</td>
+                    </tr>
+                }
+
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private Rootobject forecasts;
+    private DateTime localtime;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await RefreshDose();
+    }
+
+    public async Task RefreshDose()
+    {
+        // forecasts = new Rootobject();
+        forecasts = await Http.GetFromJsonAsync<Rootobject>("https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=725&date=30-05-2021");
+        Rootobject vacdata= forecasts;
+
+        var vailableDose = from Center center in vacdata.centers
+                           from Session session in center.sessions
+                           where (session.available_capacity > 0 || session.available_capacity_dose1 > 0 || session.available_capacity_dose2 > 0)
+                           select center;
+        var center1 = vailableDose.ToArray();
+        forecasts.centers = center1;
+        localtime = DateTime.Now;
+    }
+
+    public class WeatherForecast
+    {
+        public DateTime Date { get; set; }
+
+        public int TemperatureC { get; set; }
+
+        public string Summary { get; set; }
+
+        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+    }
+}
