@@ -6,6 +6,8 @@
 
 
 <input type="image" src="/img/Refresh_v1.png"  alt="Refresh" @onclick="RefreshDose"  />
+<input id="btnStart" type="button" @onclick="StartRefresh" value="Start Auto refresh" />
+<input id="btnStop" type="button" @onclick="StopRefresh" value="Stop Refresh" />
 <label> Last refresh time: @localtime </label>
 
 @if (forecasts == null)
@@ -47,6 +49,7 @@ else
 @code {
     private Rootobject forecasts;
     private DateTime localtime;
+    private System.Timers.Timer refreshTimer;
 
     protected override async Task OnInitializedAsync()
     {
@@ -61,11 +64,38 @@ else
 
         var vailableDose = from Center center in vacdata.centers
                            from Session session in center.sessions
-                           where (session.available_capacity > 0 || session.available_capacity_dose1 > 0 || session.available_capacity_dose2 > 0)
+                           where (session.available_capacity > 0 || (session.available_capacity_dose1 > 0 || session.available_capacity_dose2 > 0))
                            select center;
         var center1 = vailableDose.ToArray();
         forecasts.centers = center1;
         localtime = DateTime.Now;
+        StateHasChanged();
+    }
+
+    public void StartRefresh()
+    {
+        try
+        {
+            refreshTimer = new System.Timers.Timer(5000);
+            refreshTimer.Elapsed += TimerCallback;
+            refreshTimer.Enabled = true;
+            refreshTimer.Start();
+
+        }
+        catch (Exception ex)
+        {
+
+        }
+
+
+    }
+    public void TimerCallback(Object source,System.Timers.ElapsedEventArgs e)
+    {
+        RefreshDose().Wait();       
+    }
+    public void StopRefresh()
+    {
+        refreshTimer.Stop();
     }
 
     public class WeatherForecast

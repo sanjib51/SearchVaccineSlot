@@ -97,10 +97,11 @@ using System.Linq;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 47 "D:\Workspace\AvailableVaccine\Pages\FetchData.razor"
+#line 49 "D:\Workspace\AvailableVaccine\Pages\FetchData.razor"
        
     private Rootobject forecasts;
     private DateTime localtime;
+    private System.Timers.Timer refreshTimer;
 
     protected override async Task OnInitializedAsync()
     {
@@ -115,11 +116,38 @@ using System.Linq;
 
         var vailableDose = from Center center in vacdata.centers
                            from Session session in center.sessions
-                           where (session.available_capacity > 0 || session.available_capacity_dose1 > 0 || session.available_capacity_dose2 > 0)
+                           where (session.available_capacity > 0 || (session.available_capacity_dose1 > 0 || session.available_capacity_dose2 > 0))
                            select center;
         var center1 = vailableDose.ToArray();
         forecasts.centers = center1;
         localtime = DateTime.Now;
+        StateHasChanged();
+    }
+
+    public void StartRefresh()
+    {
+        try
+        {
+            refreshTimer = new System.Timers.Timer(5000);
+            refreshTimer.Elapsed += TimerCallback;
+            refreshTimer.Enabled = true;
+            refreshTimer.Start();
+
+        }
+        catch (Exception ex)
+        {
+
+        }
+
+
+    }
+    public void TimerCallback(Object source,System.Timers.ElapsedEventArgs e)
+    {
+        RefreshDose().Wait();       
+    }
+    public void StopRefresh()
+    {
+        refreshTimer.Stop();
     }
 
     public class WeatherForecast
