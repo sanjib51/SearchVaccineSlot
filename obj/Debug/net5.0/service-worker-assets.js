@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-0hVJaVz4+L44ses\/Zx8oocHUrSwiZcIlKWRV\/BZs\/Mc=",
+      "hash": "sha256-gDtclrxhfXaO+TAP1xLJE2XS7JLlmUMj4JpeabYE3TQ=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -785,11 +785,11 @@
       "url": "_framework\/dotnet.5.0.5.js"
     },
     {
-      "hash": "sha256-W3s5AIzKHCoLIyWHIjbRRI\/HxN6xniVHbtlT8gnSNk8=",
+      "hash": "sha256-Lc0AlPKxmA32MBkVk07NCQdn0J3Yw0jtcyEDB9GqHEw=",
       "url": "_framework\/AvailableVaccine.dll"
     },
     {
-      "hash": "sha256-RCU4JVVZsq3AXtMUxBDBXIEoo6MUYnSFojZaar0Fb9I=",
+      "hash": "sha256-ynTPbKm6QrezTC3XafjDDoUn9UvTEXopvSPu044I0bo=",
       "url": "_framework\/AvailableVaccine.pdb"
     },
     {
@@ -1633,10 +1633,6 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-UuWK0jpJQuShWcpbBfmDTy4NP5z8\/aOqz++KxqWk\/+U=",
-      "url": "img\/Refresh.png"
-    },
-    {
       "hash": "sha256-2ltA4tplhnewZl1eg4JtHJh+qiKeb17rJlFKIdSM5Qc=",
       "url": "img\/Refresh_v1.png"
     },
@@ -1665,5 +1661,5 @@
       "url": "AvailableVaccine.bundle.scp.css"
     }
   ],
-  "version": "4HILJ2S6"
+  "version": "bSLQcNqR"
 };

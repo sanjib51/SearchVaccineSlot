@@ -1269,3 +1269,4 @@ D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\ref\AvailableVaccine.dll
 D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\AvailableVaccine.pdb
 D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\serviceworkers\wwwroot\service-worker.js
 D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\service-worker-assets.js
+D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\AvailableVaccine.csprojAssemblyReference.cache

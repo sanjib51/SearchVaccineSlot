@@ -2,10 +2,13 @@
 @inject HttpClient Http
 @using System.Linq 
 
-<h1>Available Vaccine doses</h1>
 
 
-<input type="image" src="/img/Refresh_v1.png"  alt="Refresh" @onclick="RefreshDose"  />
+<div style="margin-bottom:20px;">
+    <h2>Available Vaccine doses <input type="image" src="img/Refresh_v1.png" width="30px" alt="Refresh" @onclick="RefreshDose" /></h2>
+    
+</div>
+
 <input id="btnStart" type="button" @onclick="StartRefresh" value="Start Auto refresh" />
 <input id="btnStop" type="button" @onclick="StopRefresh" value="Stop Refresh" />
 <label> Last refresh time: @localtime </label>
