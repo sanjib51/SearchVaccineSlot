@@ -20,9 +20,7 @@ jobs:
 
         # Generate the website
         - name: Publish
-          run: |
-            cp wwwroot/index.html wwwroot/404.html
-            dotnet publish AvailableVaccine.csproj --configuration Release
+          run: dotnet publish AvailableVaccine.csproj -p:GHPages=true -o:public -c:Release
 
         # Publish the website
         - name: GitHub Pages action
