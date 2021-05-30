@@ -17,10 +17,6 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 5.0.101
-          
-      # Run tests
-      - name: Test
-        run: dotnet test
 
       # Publish the site
       - name: Publish
