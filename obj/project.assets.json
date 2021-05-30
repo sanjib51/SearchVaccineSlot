@@ -1150,11 +1150,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Workspace\\AvailableVaccine\\AvailableVaccine.csproj",
+      "projectUniqueName": "D:\\Workspace\\SearchVaccineSlot\\AvailableVaccine.csproj",
       "projectName": "AvailableVaccine",
-      "projectPath": "D:\\Workspace\\AvailableVaccine\\AvailableVaccine.csproj",
+      "projectPath": "D:\\Workspace\\SearchVaccineSlot\\AvailableVaccine.csproj",
       "packagesPath": "C:\\Users\\Ahan\\.nuget\\packages\\",
-      "outputPath": "D:\\Workspace\\AvailableVaccine\\obj\\",
+      "outputPath": "D:\\Workspace\\SearchVaccineSlot\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ahan\\AppData\\Roaming\\NuGet\\NuGet.Config",
