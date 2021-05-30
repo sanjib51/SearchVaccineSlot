@@ -1034,7 +1034,6 @@ D:\Workspace\SearchVaccineSlot\bin\Debug\net5.0\wwwroot\_framework\icudt_CJK.dat
 D:\Workspace\SearchVaccineSlot\bin\Debug\net5.0\wwwroot\_framework\icudt_EFIGS.dat
 D:\Workspace\SearchVaccineSlot\bin\Debug\net5.0\wwwroot\_framework\icudt_no_CJK.dat
 D:\Workspace\SearchVaccineSlot\bin\Debug\net5.0\wwwroot\_framework\dotnet.5.0.5.js
-D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\AvailableVaccine.csprojAssemblyReference.cache
 D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\AvailableVaccine.GeneratedMSBuildEditorConfig.editorconfig
 D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\AvailableVaccine.AssemblyInfoInputs.cache
 D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\AvailableVaccine.AssemblyInfo.cs
