@@ -97,7 +97,7 @@ using System.Linq;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 52 "D:\Workspace\SearchVaccineSlot\Pages\FetchData.razor"
+#line 56 "D:\Workspace\SearchVaccineSlot\Pages\FetchData.razor"
        
     private Rootobject forecasts;
     private DateTime localtime;

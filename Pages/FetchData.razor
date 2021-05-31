@@ -22,11 +22,11 @@ else
     <table class="table">
         <thead>
             <tr>
-                <th>Name and address</th>
-                <th>available_capacity</th>
                 <th>date</th>
-                <th>available_capacity_dose1</th>
-                <th>available_capacity_dose2</th>
+                <th>Total Doses</th>
+                <th>dose 1</th>
+                <th>dose 2</th>
+                <th>Name and address</th>
             </tr>
         </thead>
         <tbody>
@@ -35,13 +35,17 @@ else
 
                 @foreach (var session in forecast.sessions)
                 {
-                    <tr>
-                        <td>@forecast.name : @forecast.address</td>
-                        <td>@session.available_capacity</td>
-                        <td>@session.date</td>
-                        <td>@session.available_capacity_dose1</td>
-                        <td>@session.available_capacity_dose2</td>
-                    </tr>
+                    @if (@session.available_capacity > 0)
+                    {
+            <tr>
+                <td>@session.date</td>
+                <td>@session.available_capacity</td>
+                <td>@session.available_capacity_dose1</td>
+                <td>@session.available_capacity_dose2</td>
+                <td>@forecast.name :<br /> @forecast.address</td>
+            </tr>
+                    }
+
                 }
 
             }
