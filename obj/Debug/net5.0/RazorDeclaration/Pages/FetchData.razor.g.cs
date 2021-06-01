@@ -102,6 +102,7 @@ using System.Linq;
     private Rootobject forecasts;
     private DateTime localtime;
     private System.Timers.Timer refreshTimer;
+    private double refreshTimeInterval = 30000;
 
     protected override async Task OnInitializedAsync()
     {
@@ -110,8 +111,10 @@ using System.Linq;
 
     public async Task RefreshDose()
     {
-        // forecasts = new Rootobject();
-        forecasts = await Http.GetFromJsonAsync<Rootobject>("https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=725&date=30-05-2021");
+        string toDay = DateTime.Today.ToString("dd-MM-yyyy");
+
+        string URL = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=725&date="+toDay;
+        forecasts = await Http.GetFromJsonAsync<Rootobject>(URL);
         Rootobject vacdata= forecasts;
 
         var vailableDose = from Center center in vacdata.centers
@@ -128,7 +131,7 @@ using System.Linq;
     {
         try
         {
-            refreshTimer = new System.Timers.Timer(5000);
+            refreshTimer = new System.Timers.Timer(refreshTimeInterval);
             refreshTimer.Elapsed += TimerCallback;
             refreshTimer.Enabled = true;
             refreshTimer.Start();
@@ -143,7 +146,7 @@ using System.Linq;
     }
     public void TimerCallback(Object source,System.Timers.ElapsedEventArgs e)
     {
-        RefreshDose().Wait();       
+        RefreshDose().Wait();
     }
     public void StopRefresh()
     {

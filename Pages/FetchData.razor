@@ -9,7 +9,7 @@
     
 </div>
 
-<input id="btnStart" type="button" @onclick="StartRefresh" value="Start Auto refresh" />
+<input id="btnStart" type="button" @onclick="StartRefresh" value="Start Auto Refresh(30s)" />
 <input id="btnStop" type="button" @onclick="StopRefresh" value="Stop Refresh" />
 <label> Last refresh time: @localtime </label>
 
@@ -57,6 +57,7 @@ else
     private Rootobject forecasts;
     private DateTime localtime;
     private System.Timers.Timer refreshTimer;
+    private double refreshTimeInterval = 30000;
 
     protected override async Task OnInitializedAsync()
     {
@@ -65,8 +66,10 @@ else
 
     public async Task RefreshDose()
     {
-        // forecasts = new Rootobject();
-        forecasts = await Http.GetFromJsonAsync<Rootobject>("https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=725&date=30-05-2021");
+        string toDay = DateTime.Today.ToString("dd-MM-yyyy");
+
+        string URL = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=725&date="+toDay;
+        forecasts = await Http.GetFromJsonAsync<Rootobject>(URL);
         Rootobject vacdata= forecasts;
 
         var vailableDose = from Center center in vacdata.centers
@@ -83,7 +86,7 @@ else
     {
         try
         {
-            refreshTimer = new System.Timers.Timer(5000);
+            refreshTimer = new System.Timers.Timer(refreshTimeInterval);
             refreshTimer.Elapsed += TimerCallback;
             refreshTimer.Enabled = true;
             refreshTimer.Start();
@@ -98,7 +101,7 @@ else
     }
     public void TimerCallback(Object source,System.Timers.ElapsedEventArgs e)
     {
-        RefreshDose().Wait();       
+        RefreshDose().Wait();
     }
     public void StopRefresh()
     {

@@ -1041,10 +1041,8 @@ D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\AvailableVaccine.csproj.CoreComp
 D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\AvailableVaccine.MvcApplicationPartsAssemblyInfo.cache
 D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\AvailableVaccine.RazorComponent.input.cache
 D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\RazorDeclaration\App.razor.g.cs
-D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\RazorDeclaration\Pages\Counter.razor.g.cs
 D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\RazorDeclaration\Pages\FetchData.razor.g.cs
 D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\RazorDeclaration\Pages\Index.razor.g.cs
-D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\RazorDeclaration\Shared\SurveyPrompt.razor.g.cs
 D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\RazorDeclaration\_Imports.razor.g.cs
 D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\RazorDeclaration\Shared\MainLayout.razor.g.cs
 D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\RazorDeclaration\Shared\NavMenu.razor.g.cs
@@ -1054,10 +1052,8 @@ D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\AvailableVaccine.TagHelpers.inpu
 D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\AvailableVaccine.TagHelpers.output.cache
 D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\AvailableVaccine.RazorCoreGenerate.cache
 D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\Razor\App.razor.g.cs
-D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\Razor\Pages\Counter.razor.g.cs
 D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\Razor\Pages\FetchData.razor.g.cs
 D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
-D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\Razor\Shared\SurveyPrompt.razor.g.cs
 D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\Razor\_Imports.razor.g.cs
 D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\Razor\Shared\MainLayout.razor.g.cs
 D:\Workspace\SearchVaccineSlot\obj\Debug\net5.0\Razor\Shared\NavMenu.razor.g.cs

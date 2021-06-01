@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-pAQSKZLnkX9dhy6MRBbIiwN1wuHX3pPh32Ik0AMDH9Y=",
+      "hash": "sha256-CqcaZx8kWGySBA+hJmXhu2MYP1YcBsjNL6jdsM6bpLY=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -785,11 +785,11 @@
       "url": "_framework\/dotnet.5.0.5.js"
     },
     {
-      "hash": "sha256-AykNNi5BKaFQxnWZjoUDGDpTSV1UQwUN1rUZNRCfQKw=",
+      "hash": "sha256-FcKlgWOjo2AUTY9RwuPkeDLrdOuipG5MhWYXOmymhwk=",
       "url": "_framework\/AvailableVaccine.dll"
     },
     {
-      "hash": "sha256-Cm6lNtkcItCEwZ4JjEjtZ3UiHbYj+I1XnFAdfiTU1Ps=",
+      "hash": "sha256-S+v6JwO3z\/jAQo6+mcYZfN9Op1HHwjwnP1dzHfme1x0=",
       "url": "_framework\/AvailableVaccine.pdb"
     },
     {
@@ -1637,16 +1637,12 @@
       "url": "img\/Refresh_v1.png"
     },
     {
-      "hash": "sha256-DdDtIqz8Qi+1qSpzESMdL6RdiC\/NVr9XAbQ7OehIIGs=",
+      "hash": "sha256-fMo10OxdLuVGYCAlCRfZrU0MXWrVevo0ERrat9YL4+c=",
       "url": "index.html"
     },
     {
       "hash": "sha256-l2dJ18RbUtmNPrqU2+u6JVDvZJPa5cEFKMWJsqqh4kM=",
       "url": "manifest.json"
-    },
-    {
-      "hash": "sha256-yzFf+O\/mlH+Q9klUSqXP2kxGKOUFLPxaww8da8fKhGU=",
-      "url": "sample-data\/weather.json"
     },
     {
       "hash": "sha256-\/5oa6JnxxPryZoSkXIhPgXD5QsbvcsYqA1TxwD6aSMI=",
@@ -1661,5 +1657,5 @@
       "url": "AvailableVaccine.bundle.scp.css"
     }
   ],
-  "version": "0b6KHFL\/"
+  "version": "nZ1AQvVV"
 };
